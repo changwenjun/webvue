@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_498891_3w9c3bx3zn5yu8fr.css" />
+		<script type="text/javascript" src="js/base_rem.js" ></script>
+	</head>
+	<body>
+		<div class="container" id="ack-order">
+			<div class="main_order">
+					<div class="ack-oder-li1"  onclick="window.location.href='add_address.html'">
+						<div class="ack-oder-li-con">
+							<i class="ack-img  iconfont  icon-oupaitubiaodizhi"></i>
+							<div class="ack-name">
+								<p><span>今尚科技</span><i>13568592654</i></p>
+								<p>广东省广州市白云区云城西路北89号今尚科技大厦</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="ack-oder-li2">
+						<div class="ack-oder-li-con">
+							<span>配送方式</span>
+							<i  @click="choseLogistics(true)">{{express[num_express].name}}&nbsp;￥{{express[num_express].price}}<em class="iconfont   icon-more"></em></i>
+						</div>
+					</div>
+					
+						<div class="ack-oder-li3">
+						<div class="ack-oder-li-con">
+							<img src="img/pic1.jpg" />
+							<div >
+									<p class="p1">2017新茶 大红袍茶叶 乌龙茶...</p>
+									<p class="p2"><span>规格：大罐</span><i>x1</i></p>
+									<p class="p3">￥488.0</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="ack-oder-li2">
+						<div class="ack-oder-li-con">
+							<span>账户余额：488.0</span>
+						</div>
+					</div>
+					
+						<div class="ack-oder-li4">
+						<div class="ack-oder-li-con">
+							<p><span>商品金额</span><i>￥488.0</i></p>
+							<p><span>运费</span><i>+￥{{express[num_express].price}}</i></p>
+							<p><span>账户余额抵扣</span><i>-￥0.0</i></p>
+						</div>
+					</div>
+			</div>
+			<div class="ack_footer">
+				<div class="ack_footer_price">
+					共1件，合计：<i>￥{{express[num_express].price+488.0}}</i>
+				</div>
+				<div class="ack_footer_vs">去支付</div>
+			</div>
+			<div class="ack-logistics"  v-if="logistics">
+				<p class="item-p1">配送方式</p>
+				<ul>
+					<li v-for="(item,index) in express"><i :class="['iconfont',{'icon-tongxinyuanhuan':index!=num_express,'icon-anonymous-iconfont':index==num_express}]" @click="Express(index)"></i><span>{{item.name}}</span><em>￥{{item.price}}</em></li>
+				</ul>
+				<p class="item-p2"  @click="choseLogistics(false)">取消</p>
+			</div>
+			<div class="ack-logistics-child"   v-if="logistics"></div>
+		</div>
+		<script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="js/ack_order.js" ></script>
+	</body>
+</html>

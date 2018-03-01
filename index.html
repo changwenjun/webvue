@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_498891_3w9c3bx3zn5yu8fr.css" />
+		<script type="text/javascript" src="js/base_rem.js" ></script>
+	</head>
+	<body>
+	<audio  id="music" loop="loop"   autoplay="autoplay">
+		<source src="http://v.ecwcn.com/addons/tyzm_diamondvote/template/static/music/mp3.mp3" type="audio/ogg" />
+	</audio>
+	<script>
+		Media = document.getElementById("music");
+		Media.src = "http://v.ecwcn.com/addons/tyzm_diamondvote/template/static/music/mp3.mp3";
+		Media.play();
+	</script>
+
+	<div class="container" id='index'>
+			<div class="main ">
+				<ul>
+					<li v-for="(item,index) in items">
+						<div class="ico"><i  :class="['iconfont',{'icon-tongxinyuanhuan':!item.checked,'icon-anonymous-iconfont':item.checked}]"  @click="selectedProduct(item)"></i></div>
+						<div class="left"><img v-bind:src="item.productImage"  v-bind:alt="item.productName" /></div>
+						<div class="right">
+							<p class="item-name">({{index}}){{item.productName}}</p>
+							<p class="item-attribute"><span>颜色：{{item.productColor}}</span><span class="item-span">尺码：{{item.productSize}}</span><i  class="iconfont  icon-delete"  @click="floatWindow(true,index)"></i></p>
+							<div class="item-operation">
+								<span class="item-price">{{item.productPrice*item.productQuantity|formatMoney}}</span>
+								<div class="quantity">
+									<a href="javascript:void(0);" class="iconfont  icon-jianhao"  @click="changSize(item,-1)"></a>
+									<input type="text"  class="span"  v-model="item.productQuantity" disabled="disabled"/>
+									<a href="javascript:void(0);" class="iconfont  icon-add" @click="changSize(item,1)"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="settlement">
+					<div class="settlement-chose"><i :class="['iconfont',{'icon-tongxinyuanhuan':!checkAllFlag,'icon-anonymous-iconfont':checkAllFlag}]" @click="checkAll(!checkAllFlag)"></i>&nbsp;&nbsp;全选</div>
+					<div class="settlement-price">
+						<p>合计：{{totalmoney|formatMoney}}</p>
+						<span>(不含运费)</span>
+					</div>
+					<div class="settlement-calcu">结算({{items.length}})</div>
+			</div>
+			<div class="foat-window"  v-if="popup">
+					<p>您确认删除此订单信息吗？</p>
+					<div class="delect-shop">
+						<span @click="delShop">删除</span><span   @click="floatWindow(false)">取消</span>
+					</div>
+			</div>
+			<div class="show-black"  v-if="popup"></div>
+			<div class="footer">
+				<ul>
+					<li onclick="window.location.href='/'">
+						<i class="iconfont  icon-home"></i>
+						   首页
+					</li>
+					
+					<li onclick="window.location.href='/hot.html'">
+						<i class="iconfont  icon-viewgallery"></i>
+						   分类
+					</li>
+					
+					<li>
+						<i class="iconfont icon-cart"></i>
+						   购物车
+					</li>
+					
+					<li>
+						<i class="iconfont icon-account"></i>
+						   我
+					</li>
+					
+				</ul>
+		</div>
+		</div>
+
+    <script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/cart.js"></script>
+	</body>
+</html>

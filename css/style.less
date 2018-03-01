@@ -1,0 +1,811 @@
+@fontSize:0.025rem;
+@fontColor:#333;
+.main{
+    background: #eff0f4;
+    overflow: hidden;
+    ul{
+        background: #eff0f4;
+        li{
+            overflow: hidden;
+            background: #fff;
+            margin-top:@fontSize*20;
+            padding:@fontSize*20 0;
+            list-style-type: circle;
+            .ico{
+                width:54*@fontSize;
+                padding-top:50*@fontSize;
+                float: left;
+                .iconfont{
+                    margin-left:15*@fontSize;
+                    font-size: @fontSize*25;
+                }
+            }
+            .left{
+                width:@fontSize*148;
+                height:@fontSize*148;
+                float: left;
+                img{
+                    width:100%;
+                }
+            }
+            .right{
+                width:@fontSize*415;
+                margin-left:@fontSize*14;
+                float:left;
+                .item-name{
+                    font-size:@fontSize*24;
+                    font-weight:600;
+                    color:@fontColor;
+                }
+                .item-attribute{
+                    font-size:@fontSize*24;
+                     color:@fontColor;
+                     margin-top:@fontSize*20;
+                     margin-bottom :@fontSize*15;
+                     .item-span{
+                         margin-left:@fontSize*40;
+                     }
+                     .iconfont{
+                         margin-left:@fontSize*90;
+                         font-size:@fontSize*35;
+                     }
+                }
+                .item-operation{
+                    font-size:@fontSize*28 ;
+                    color:#db2626;
+                   .item-price{
+                       width:215*@fontSize;
+                       float: left;
+                   }
+                   .quantity{
+                       width:@fontSize*180;
+                       height:@fontSize*45;
+                       float:left;
+                       border: 1px solid  #efeeea;
+                       a{
+                           display: block;
+                           width:175/3*@fontSize;
+                           height: @fontSize*45;
+                           float: left;
+                           font-size:@fontSize*28 ;
+                           text-align: center;
+                           line-height:@fontSize*45; 
+                           color:@fontColor;
+                       }
+                       a:first-child{
+                            border-right: 1px solid  #efeeea;
+                       }
+                       .span{
+                             display: block;
+                            width:175/3*@fontSize;
+                            height: @fontSize*45;
+                            border:0 none;
+                             float: left;
+                             font-size:@fontSize*28 ;
+                              color:@fontColor;
+                              text-align: center;
+                            line-height:@fontSize*45; 
+                              border-right: 1px solid  #efeeea;
+                       }
+                   }
+                }
+            }
+        }
+        li:first-child{
+            margin-top:0;
+        }
+    }
+}
+.settlement{
+    position: fixed;
+    bottom: 96*@fontSize;
+    .settlement-chose{
+        width: @fontSize*120;
+        height:@fontSize*100;
+        line-height: @fontSize*100;
+        text-align: center;
+        font-size:@fontSize*24;
+        float:left;
+        i{
+            font-size: @fontSize*25;
+        }
+    }
+    .settlement-price{
+        width:@fontSize*276;
+        height:@fontSize*100;
+        overflow: hidden;
+        float:left;
+        p{
+            font-size:@fontSize*28;
+            color:#c10000;
+            padding:19*@fontSize 0 0 0;
+        }
+        span{
+             font-size:@fontSize*24;
+        }
+    }
+    .settlement-calcu{
+        width:@fontSize*244;
+        height:@fontSize*100;
+        float:left;
+        font-size: @fontSize*30;
+         color:#fff;
+        text-align: center;
+        line-height: @fontSize*100;
+        background:#c10000 ;
+    }
+}
+.footer{
+    width:@fontSize*640;
+    position: fixed;
+    bottom:0;
+    ul{
+        li{
+            width:@fontSize*160;
+            height:@fontSize*95;
+            float:left;
+            font-size:@fontSize*24 ;
+            text-align: center;
+            border-top:1px  solid  #aaaaaa;
+            i{
+                display: block;
+                 font-size:@fontSize*35 ;
+                 margin:@fontSize*10 0 @fontSize*5  0;
+            }
+        }
+    }
+}
+/*添加地址页面*/
+.main_address{
+    background: #eff0f4;
+  .item_list{
+      overflow: hidden;
+      li{
+          background: #fff;
+          margin-top:@fontSize*20;
+          div{
+               width:@fontSize*592;
+               padding:@fontSize*22 0 @fontSize*35 0;
+               margin:0 auto;
+          }
+          font-size: @fontSize*24;
+          .info-name{
+              overflow: hidden;
+              span{
+                  float: left;
+              }
+              i{
+                  float: right;
+              }
+              
+          }
+          .info-address{
+              height:@fontSize*60;
+              line-height: @fontSize*60;
+              border-bottom:1px  dashed   #cccccc;
+          }
+          .info-default{
+              margin-top:@fontSize*30;
+              overflow: hidden;
+              .info_i{
+                  float: left;
+              }
+              span{
+                  float: right;
+                  i:first-child{
+                      margin-right:@fontSize*55;
+                  }
+              }
+          }
+      }
+      li:first-child{
+          margin-top:0;
+      }
+  }
+}
+.add_footer{
+    position: fixed;
+    bottom: 0;    
+    width:640*@fontSize;
+    height:@fontSize*95;
+    text-align: center;
+    line-height: @fontSize*95;
+    font-size:@fontSize*30 ;
+    color:#fff;
+    background: #da251d;
+}
+/*订单确认页面*/
+
+.main_order{
+    background: #eff0f4;
+    .ack-oder-li1{
+        font-size: @fontSize*24;
+        padding:@fontSize*25 0;
+        background: #fff;
+        overflow: hidden;
+        .ack-oder-li-con{
+            width:@fontSize*592;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        .ack-img{
+            width:@fontSize*50;
+           font-size:@fontSize*45;
+            float: left;
+            margin-top:@fontSize*20;
+        }
+        .ack-name{
+            width:@fontSize*(592-50);
+            float: left;
+            p:first-child{
+                overflow: hidden;
+                 span {
+                     float: left;
+                }
+                 i{
+                     float: right;
+                 }  
+            }
+            p:last-child{
+                margin-top:@fontSize*20;
+            }
+        }
+    }
+   .ack-oder-li2{
+           padding:25*@fontSize 0;
+           overflow: hidden;
+           background: #fff;
+           margin-top:@fontSize*20;
+          .ack-oder-li-con{
+                width:@fontSize*592;
+                margin:0 auto;
+                overflow: hidden;
+                font-size: @fontSize*24;
+                span{
+                    float: left;
+                }
+                i{
+                    float: right;
+                    em{
+                         font-size: @fontSize*30; 
+                         vertical-align: middle;
+                    }
+                   
+                }
+            }
+   }
+      .ack-oder-li3{
+          overflow: hidden;
+          padding:20*@fontSize 0;
+          background: #fff;
+          margin-top:@fontSize*20;
+           .ack-oder-li-con{
+                 width:@fontSize*592;
+                margin:0 auto;
+                overflow: hidden;
+                img{
+                    width:@fontSize*150;
+                    height:@fontSize*145;
+                    float: left;
+                }
+                div{
+                    margin-left:@fontSize*15;
+                    width:@fontSize*427;
+                    float: left;
+                    .p1{
+                        font-size: @fontSize*28;
+                        height: @fontSize*55;      
+                        line-height: @fontSize*55;              
+                    } 
+                      .p2{
+                          overflow: hidden;
+                        font-size: @fontSize*24;
+                        span{
+                            display: block;
+                            width:50%;
+                            float: left;
+                        }
+                        i{
+                            display: block;
+                            width:50%;
+                            float: left;
+                        }
+                    }
+                    
+                      .p3{
+                          overflow: hidden;
+                        font-size: @fontSize*28;
+                        color:#da251d;
+                        margin-top:@fontSize*10;
+                    }
+                }
+           }
+      }
+      
+      .ack-oder-li4{
+         overflow: hidden;
+          padding:10*@fontSize 0;
+          background: #fff;
+          margin-top:@fontSize*20;
+            .ack-oder-li-con{
+                width:@fontSize*592;
+                margin:0 auto;
+                overflow: hidden;
+                p{
+                    height:60*@fontSize;
+                    line-height:60*@fontSize ;
+                    span{
+                        float: left;
+                    }
+                    i{
+                        float: right;
+                        color:#da251d;
+                    }
+                }
+            }
+      } 
+      
+}
+
+.ack_footer{
+    position: fixed;
+    bottom: 0;
+    .ack_footer_price{
+        width:@fontSize*395;
+        height:@fontSize*92;
+        text-align: center;
+        line-height:@fontSize*92 ;
+        font-size: @fontSize*24;
+        float: left;
+        i{
+            color:#da251d;
+            font-size: @fontSize*28;
+        }
+    }
+    .ack_footer_vs{
+        width:@fontSize*(640-395);
+        height:@fontSize*92;
+        text-align: center;
+        line-height:@fontSize*92 ;
+        font-size: @fontSize*28;
+        color: #fff;
+        background:#da251d;
+        float: left;
+    }
+}
+/*热卖推荐*/
+.main_hot{
+    .search{
+        width:@fontSize*592;
+        margin:0 auto;
+        .search-form{
+            width:@fontSize*498;
+            height:@fontSize*54;
+            border: 1*@fontSize  solid #cccccc;
+            float: left;
+            font-size: @fontSize*24;
+            overflow: hidden;
+            border-radius: 5*@fontSize;
+            input{
+                 width:@fontSize*(498-51);
+                height:@fontSize*54;
+                line-height:@fontSize*54; 
+                border: 0 none;
+                 float: left;
+            }
+            i{
+                display: block;
+                width:@fontSize*51;
+                height:@fontSize*54;
+                float: left;
+                line-height:@fontSize*54; 
+                text-align: center;
+                 font-size: @fontSize*45;
+            }
+        }
+        button{
+            width:@fontSize*89;
+            height:@fontSize*54;
+            border-radius: 5*@fontSize;
+            background: #DA251D;
+            color: #fff;
+            text-align: center;      
+            line-height: @fontSize*54;
+            font-size: @fontSize*24;
+            margin-left:@fontSize*3;
+            border: 0 none;
+              }
+    }
+   .product-list{
+        width:@fontSize*592;
+        margin:0 auto;
+       ul{
+           li{
+               width:@fontSize*283;
+               float: left;
+               border:1*@fontSize solid #da251d;
+               margin-top:@fontSize*20;
+               img{
+                   width:100%;
+                   height:@fontSize*194; 
+               }
+               p{
+                   font-size: @fontSize*24;
+                   line-height: @fontSize*35;
+                   padding:0  10*@fontSize;
+               }
+               span{
+                   display: block;
+                   height:50*@fontSize;
+                    font-size: @fontSize*24;
+                   line-height: @fontSize*50;
+                    color:#da251d;
+                    padding:0  10*@fontSize;
+               }
+           }
+             .act_li{
+                   margin-left:@fontSize*20;
+               }
+       }
+   }
+}
+/*保存地址*/
+.main_save{
+    p{
+        width: @fontSize*592;
+        margin:  0  auto;
+        font-size: @fontSize*28;
+        height:@fontSize*85;
+        line-height: @fontSize*85;
+        border-bottom:1px  solid #e5e5e5;
+        overflow: hidden;
+        position: relative;
+        label{
+            position: absolute;
+            left: 0;
+            
+        }
+        input{
+             font-size: @fontSize*28;
+             display:inline-block;
+             border:0 none;
+             width:@fontSize*(592-112);
+            padding-left: @fontSize*112;
+        }
+        
+    }
+    
+    .input-area{
+        input{
+            width:@fontSize*(592-140);
+            padding-left: @fontSize*140;
+        }
+    }
+    
+      .input-address{
+         height:@fontSize*140;
+        textarea{
+            padding-left: @fontSize*140;
+            height:@fontSize*140;
+             font-size: @fontSize*28;
+             display:inline-block;
+             width:@fontSize*(592-140);
+             border:0 none;
+             padding-top:@fontSize*24;
+        }
+    }
+    button{
+        display: block;
+        width:@fontSize*570;
+        height:@fontSize*80;
+        border-radius:@fontSize*10;
+        color:#fff;
+        font-size:@fontSize*28;
+        text-align: center;
+        line-height: @fontSize*80;
+        background:#DA251D;
+        margin:0 auto;
+        border:0 none;
+        margin-top:@fontSize*145;
+    }
+    
+}
+/*商品种类*/
+.main_shop{
+    background: #eff0f4;
+    padding-bottom: 230*@fontSize;
+    .banner{
+        height:@fontSize*300;
+        width:100%;
+        overflow: hidden;
+    }
+    .shop-name{
+         overflow: hidden;
+        background: #fff;
+        padding:5*@fontSize 0;
+        div{
+            width:@fontSize*592;
+            margin:0 auto;
+        }
+        p{
+            height:60*@fontSize;
+            line-height: 60*@fontSize;
+            font-size:@fontSize*28;
+        }
+        span{
+            display: block;
+             height:50*@fontSize;
+            line-height: 50*@fontSize;
+            font-size:@fontSize*30;
+            color:#DA251D;
+        }
+        
+    }
+    .shop-chose{
+        overflow: hidden;
+        background: #fff;
+        margin-top:20*@fontSize;
+         div{
+            width:@fontSize*592;
+            margin:0 auto;
+            height:75*@fontSize;
+            line-height: 75*@fontSize;
+            font-size:@fontSize*24;
+         }
+        i{
+            float: right;
+            font-size:@fontSize*28;
+        }
+    }
+    .shop-comm{
+        overflow: hidden;
+        background: #fff;
+        margin-top:20*@fontSize;
+        .shop-comm-c{
+            padding-bottom: 30*@fontSize;
+            width:@fontSize*592;
+            margin:0 auto;
+            .comm-title{
+                height:@fontSize*63;
+                line-height: @fontSize*63;
+                overflow: hidden;
+                .title-name{
+                    display: inline;
+                    i{
+                        font-size: @fontSize*24;
+                    }
+                    span{
+                        font-size: @fontSize*22;
+                        margin-left:@fontSize*5;
+                        em{
+                            color:#ff9c3f;
+                        }
+                    }
+                } 
+                  .title-num{
+                        font-size: @fontSize*24;
+                        float: right;
+                    }
+            }
+            ul{
+                li{
+                    border-top:1px  solid #e5e5e5;
+                    padding-bottom:15*@fontSize;
+                    .p1{
+                        padding:15*@fontSize  0;
+                        overflow: hidden;
+                        span:first-child{
+                            float: left;
+                            img{
+                            display: inline-block;
+                            width:@fontSize*55;
+                            height:@fontSize*55;
+                            }
+                        }
+                      span:last-child{
+                            height:@fontSize*55;
+                            line-height: @fontSize*55;
+                            float: right;
+                            i{
+                                 font-size: @fontSize*28;
+                            }
+                        .i-yellow{
+                            color:yellow;
+                        }
+                      }
+                    }
+                    .p2{
+                        font-size: @fontSize*24;
+                        line-height: @fontSize*35;
+                    }
+                    .p3{
+                        height:@fontSize*50;
+                        line-height:@fontSize*50;
+                        font-size: @fontSize*24;
+                        span{
+                            float: left;
+                        }
+                        i{
+                            float: right;
+                        }
+                    }
+                    .p4{
+                        img{
+                            width:@fontSize*136;
+                            height:133*@fontSize;
+                            margin-left:@fontSize*18;
+                        }
+                        .img-l{
+                            margin-left:0;
+                        }
+                    }
+                }
+            }
+           .more{
+               width:@fontSize*198;
+               height: @fontSize*54;
+               border: 1px  solid #DA251D;
+               border-radius: 10*@fontSize;
+               text-align:center;
+               line-height: @fontSize*54;
+               font-size: @fontSize*24;
+               margin:0 auto;
+               margin-top:@fontSize*15;
+               color:#DA251D;
+           }
+        }
+    }
+}
+.footer-shop{
+    border-top:1*@fontSize solid #E5E5E5;
+    max-width: 640;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    background: #fff;
+    .shop-li1{
+         font-size: @fontSize*24 ;
+         width:120*@fontSize;
+         height:@fontSize*90;
+         float: left;
+          display: block;
+         text-align: center;
+         border-right:1*@fontSize solid #E5E5E5;
+        i{
+            display: block;
+            margin:10*@fontSize 0;
+            font-size: @fontSize*35;
+        }    
+    }
+    
+     .shop-li2{
+         font-size: @fontSize*24 !important;
+         width:120*@fontSize;
+         height:@fontSize*90;
+         float: left;
+          display: block;
+         text-align: center;
+         border-right:1*@fontSize  solid #E5E5E5;
+        i{
+            display: block;
+            margin:10*@fontSize 0;
+             font-size: @fontSize*35 ;
+        }    
+    }
+    .shop-li3{
+        text-align: center;
+        width:@fontSize*208;
+        height:@fontSize*90;
+        line-height: @fontSize*90;
+         font-size: @fontSize*28;
+         float: left;
+         display: block;
+    }
+    
+     .shop-li4{
+        text-align: center;
+        width:@fontSize*190;
+        height:@fontSize*90;
+        line-height: @fontSize*90;
+         font-size: @fontSize*28;
+         float: left;
+         display: block;
+         background: #da251d;
+         color: #fff;
+    }
+}
+
+.foat-window{
+    width:500*@fontSize;
+    height:@fontSize*300;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left:-@fontSize*(500/2);
+    margin-top:-@fontSize*(300/2);
+    background: #fff;
+    z-index: 2;
+    p{
+        text-align: center;
+        font-size: @fontSize*24; 
+        height:50*@fontSize;
+        line-height: 50*@fontSize;
+        margin-top:80*@fontSize;
+    }
+   .delect-shop{
+       font-size: @fontSize*24; 
+       width:@fontSize*400;
+       margin:0 auto;
+       margin-top:@fontSize*70;
+       span{
+           display: block;
+           width:@fontSize*190;
+           height:@fontSize*50;
+           text-align: center;
+           line-height: @fontSize*50;
+           color:#fff;
+           background: #DA251D;
+           float: left;
+       }
+       span:last-child{
+           margin-left:20*@fontSize;
+       }
+   }
+}
+.show-black{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+     z-index: 1;
+}
+.ack-logistics{
+    width:@fontSize*420;
+    height:@fontSize*340;
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin-left:-250*@fontSize;
+    margin-top:-@fontSize*170;
+    background: #fff;
+    z-index: 2;
+    padding:0  @fontSize*40;
+   .item-p1{
+         font-size: @fontSize*30;
+         margin-top:@fontSize*30;
+     }
+     ul{
+         li{
+             font-size: @fontSize*24;
+              margin-top:@fontSize*30;
+              i{
+                  font-size: @fontSize*24;
+              }
+              span{
+                  margin:0 20*@fontSize;
+              }
+              em{
+                  color:#666;
+              }
+             .icon-anonymous-iconfont{
+                 color:#DA251D;
+             }
+         }
+     }
+      .item-p2{
+         font-size: @fontSize*24;
+          margin-top:@fontSize*30;
+          text-align: right;
+     }
+}
+.ack-logistics-child{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+     z-index: 1;
+}
